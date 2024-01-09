@@ -1,0 +1,113 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>crud-swashbuckle</name>
+    </assembly>
+    <members>
+        <member name="M:crud_swashbuckle.Controllers.UserDeleteController.Delete(System.Int32)">
+            <summary>
+            Delete a Specific User
+            </summary>
+            <param name="id"></param>
+            <returns>User Deleted Successfully</returns>
+            <remarks>
+            Sample request:
+             
+                 Delete /TODO
+                 {
+                     "id": 1    
+                 }
+            </remarks>
+            <response code="200"> Return user deleted successfully </response>
+            <response code="400"> Error deleting user </response>
+            <response code="404"> User not found if null</response>
+        </member>
+        <member name="M:crud_swashbuckle.Controllers.UserGetController.Get">
+             <summary>
+             Get all users from the table
+             </summary>
+             <returns>Users found</returns>
+            <response code="200"> Return users found </response>
+            <response code="404"> Users not found if null</response>
+        </member>
+        <member name="M:crud_swashbuckle.Controllers.UserGetController.GetById(System.Int32)">
+             <summary>
+             Get table user by id
+             </summary>
+             <param name="id"></param>
+             <returns>User found</returns>
+            <response code="200"> Return user found </response>
+            <response code="404"> User not found if null</response>
+        </member>
+        <member name="M:crud_swashbuckle.Controllers.UserPostController.Post(crud_swashbuckle.Model.User)">
+            <summary>
+            Adds a new user to the table
+            </summary>
+            <param name="user"></param>
+            <returns>User Created Successfully</returns>
+            <remarks>
+            Sample request:
+            
+                POST /TODO
+                {
+                    "name": "Ronaldinho Luiz",
+                    "dateOfBirth: "2024-01-08T19:31:46.419Z"
+                }
+            </remarks>
+            <response code="204"> Return user created successfully </response>
+            <response code="400"> Error creating user </response>
+        </member>
+        <member name="M:crud_swashbuckle.Controllers.UserPutController.Post(System.Int32,crud_swashbuckle.Model.User)">
+             <summary>
+             Update a user table
+             </summary>
+             <param name="id"></param>
+             <param name="user"></param>
+             <returns>Resource Updated Successfully</returns>
+             <remarks>
+            Sample request:
+             
+                 Update /TODO Before
+                 {
+                     "id": 1,   
+                     "name": "Ronaldinho Luiz",
+                     "dateOfBirth: "2020-11-28T19:31:46.419"
+                 }
+             
+                 Update /TODO After
+                 {
+                     "id": 1,    
+                     "name": "Sérgio Luiz",
+                     "dateOfBirth: "2024-01-08T19:31:46.419"
+                 }
+            </remarks>
+            <response code="200"> Return user Updated successfully </response>
+            <response code="400"> Error when updating user </response>
+            <response code="404"> User not found if null</response>
+        </member>
+        <member name="T:crud_swashbuckle.Migrations.InitialCreate">
+            <inheritdoc />
+        </member>
+        <member name="M:crud_swashbuckle.Migrations.InitialCreate.Up(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="M:crud_swashbuckle.Migrations.InitialCreate.Down(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="M:crud_swashbuckle.Migrations.InitialCreate.BuildTargetModel(Microsoft.EntityFrameworkCore.ModelBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="T:crud_swashbuckle.Migrations.UpdateUsers">
+            <inheritdoc />
+        </member>
+        <member name="M:crud_swashbuckle.Migrations.UpdateUsers.Up(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="M:crud_swashbuckle.Migrations.UpdateUsers.Down(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="M:crud_swashbuckle.Migrations.UpdateUsers.BuildTargetModel(Microsoft.EntityFrameworkCore.ModelBuilder)">
+            <inheritdoc />
+        </member>
+    </members>
+</doc>
